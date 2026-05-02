@@ -6,6 +6,7 @@ __pycache__/
 *.pyc
 .env
 .vscode/
+.github/
 
 bridge/_pending.json
 bridge/transcripts/*.log
