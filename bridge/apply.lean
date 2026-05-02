@@ -82,10 +82,14 @@ def main (args : List String) : IO UInt32 := do
   -- Parse each policy file in argument order
   let mut policies : List RedactionPolicy := []
   for path in args do
-    let raw ← try IO.FS.readFile path
-              catch e =>
-                IO.eprintln s!"failed to read {path}: {e}"
-                return 2
+    let raw? ← try
+        let raw ← IO.FS.readFile path
+        pure (some raw)
+      catch e =>
+        IO.eprintln s!"failed to read {path}: {e}"
+        pure none
+    let some raw := raw?
+      | return 2
     match Json.parse raw with
     | .error e =>
         IO.eprintln s!"JSON parse error in {path}: {e}"
