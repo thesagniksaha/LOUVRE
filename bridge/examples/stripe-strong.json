@@ -1,0 +1,28 @@
+{
+  "source":  {
+    "kind": "anyOf",
+    "items": [
+      {"kind": "prefix", "value": "sk_test_"},
+      {"kind": "prefix", "value": "sk_live_"}
+    ]
+  },
+  "matcher": {
+    "kind": "anyOf",
+    "items": [
+      {"kind": "prefix", "value": "sk_test_"},
+      {"kind": "prefix", "value": "sk_live_"}
+    ]
+  },
+  "replacement": "[REDACTED-STRIPE-KEY]",
+  "secretSamples": [
+    "sk_test_abc123",
+    "sk_live_dangerouslyExposed",
+    "sk_test_xyz",
+    "sk_live_a1b2c3"
+  ],
+  "benignSamples": [
+    "test_mode",
+    "live_mode",
+    "Friday"
+  ]
+}

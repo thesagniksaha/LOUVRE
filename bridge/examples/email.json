@@ -1,0 +1,16 @@
+{
+  "source":  {"kind": "contains", "value": "@"},
+  "matcher": {"kind": "contains", "value": "@"},
+  "replacement": "<email>",
+  "secretSamples": [
+    "hello@example.com",
+    "alice@anthropic.com",
+    "first.last+tag@subdomain.org"
+  ],
+  "benignSamples": [
+    "Contact",
+    "details",
+    "Friday",
+    "shipping"
+  ]
+}

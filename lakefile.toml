@@ -1,0 +1,17 @@
+name = "LOUVRE"
+version = "0.1.0"
+defaultTargets = ["louvre"]
+
+[[lean_lib]]
+name = "LOUVRE"
+
+[[lean_exe]]
+name = "louvre"
+root = "Main"
+
+[leanOptions]
+pp.unicode.fun = true # pretty-prints `fun a ↦ b`
+
+#[[require]]
+#name = "mathlib"
+#path = "/Users/thesagniksaha/lean-shared/mathlib"

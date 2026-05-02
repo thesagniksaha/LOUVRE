@@ -1,0 +1,13 @@
+{
+  "source":  {"kind": "prefix", "value": "AKIA"},
+  "matcher": {"kind": "always"},
+  "replacement": "[REDACTED]",
+  "secretSamples": [
+    "AKIAIOSFODNN7EXAMPLE"
+  ],
+  "benignSamples": [
+    "Tweet",
+    "launching",
+    "Friday"
+  ]
+}

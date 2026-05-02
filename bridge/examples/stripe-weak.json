@@ -1,0 +1,21 @@
+{
+  "source":  {
+    "kind": "anyOf",
+    "items": [
+      {"kind": "prefix", "value": "sk_test_"},
+      {"kind": "prefix", "value": "sk_live_"}
+    ]
+  },
+  "matcher": {"kind": "prefix", "value": "sk_test_"},
+  "replacement": "[REDACTED-STRIPE-KEY]",
+  "secretSamples": [
+    "sk_test_abc123",
+    "sk_live_dangerouslyExposed",
+    "sk_test_xyz"
+  ],
+  "benignSamples": [
+    "test_mode",
+    "live_mode",
+    "Friday"
+  ]
+}

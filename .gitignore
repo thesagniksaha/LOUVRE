@@ -1,0 +1,12 @@
+.lake/
+/.lake
+build/
+.DS_Store
+__pycache__/
+*.pyc
+.env
+.vscode/
+
+bridge/_pending.json
+bridge/transcripts/*.log
+docs/architecture.svg.bak

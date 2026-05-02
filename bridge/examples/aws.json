@@ -1,0 +1,15 @@
+{
+  "source":  {"kind": "prefix", "value": "AKIA"},
+  "matcher": {"kind": "prefix", "value": "AKIA"},
+  "replacement": "[REDACTED-AWS-KEY]",
+  "secretSamples": [
+    "AKIAIOSFODNN7EXAMPLE",
+    "AKIA1234567890ABCDEF"
+  ],
+  "benignSamples": [
+    "Tweet",
+    "launching",
+    "today",
+    "Friday"
+  ]
+}
