@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""LouVRE LLM bridge.
+"""LOUVRE LLM bridge.
 
 Calls OpenAI to synthesize a `RedactionPolicy` JSON for a natural-language
 description of a secret class. Pipes the JSON through Lean's `Verify.lean`
@@ -124,7 +124,7 @@ def verify_only(path: Path) -> None:
 
 
 def main() -> None:
-    ap = argparse.ArgumentParser(description="LouVRE LLM bridge")
+    ap = argparse.ArgumentParser(description="LOUVRE LLM bridge")
     ap.add_argument("description", nargs="?", help="natural-language secret description")
     ap.add_argument("--example", type=Path, help="verify a hand-curated example without calling the LLM")
     args = ap.parse_args()
